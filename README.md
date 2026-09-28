@@ -1,4 +1,4 @@
-# Portfólio de QA — Kauan [Sobrenome]
+# Portfólio de QA — Kauan [Henrique]
 
 Repositório com projetos práticos de teste de software, desenvolvidos durante o curso de Análise e Desenvolvimento de Sistemas (ADS) e estudos complementares em QA.
 
@@ -6,7 +6,7 @@ Repositório com projetos práticos de teste de software, desenvolvidos durante 
 
 Ex-goleiro profissional em transição para QA, cursando ADS. Foco em testes funcionais, exploratórios, de UI e de automação (Cypress, Postman).
 
-🔗 [LinkedIn](#) · 📧 [email de contato](#)
+🔗 [LinkedIn](https://www.linkedin.com/in/kauan-henrique-coutinho-prates-a672883ba/) · 📧 [kauanhprates10@gmail.com](#)
 
 ## Projetos
 
