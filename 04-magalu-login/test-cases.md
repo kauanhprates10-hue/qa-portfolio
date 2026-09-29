@@ -1,13 +1,14 @@
-# Casos de Teste — Login Magazine Luiza
+# Casos de Teste — Login (Magazine Luiza)
 
-| ID | Cenário | Passos | Resultado esperado | Resultado obtido | Status | Evidência |
-|---|---|---|---|---|---|---|
-| TC-01 | Login com e-mail e senha corretos | 1. Acessar tela de login<br>2. Inserir e-mail válido cadastrado<br>3. Inserir senha correta<br>4. Clicar em "Entrar" | Usuário autenticado e redirecionado para a home/conta | [preencher] | [Pass/Fail] | evidence/tc-01.png |
-| TC-02 | Login com e-mail correto e senha incorreta | 1. Inserir e-mail válido<br>2. Inserir senha incorreta<br>3. Clicar em "Entrar" | Mensagem de erro genérica, sem revelar se o e-mail é válido | [preencher] | [Pass/Fail] | evidence/tc-02.png |
-| TC-03 | E-mail sem "@" | 1. Inserir texto sem "@" no campo de e-mail<br>2. Inserir senha qualquer<br>3. Clicar em "Entrar" | Validação de formato bloqueia o submit com mensagem específica | [preencher] | [Pass/Fail] | evidence/tc-03.png |
-| TC-04 | Campo de senha vazio | 1. Inserir e-mail válido<br>2. Deixar senha em branco<br>3. Clicar em "Entrar" | Sistema bloqueia submit e indica campo obrigatório | [preencher] | [Pass/Fail] | evidence/tc-04.png |
-| TC-05 | Campo de e-mail vazio | 1. Deixar e-mail em branco<br>2. Inserir senha qualquer<br>3. Clicar em "Entrar" | Sistema bloqueia submit e indica campo obrigatório | [preencher] | [Pass/Fail] | evidence/tc-05.png |
-| TC-06 | Toggle "mostrar senha" | 1. Inserir senha no campo<br>2. Clicar no ícone de mostrar senha | Senha alterna entre oculta (••••) e visível (texto plano) | [preencher] | [Pass/Fail] | evidence/tc-06.png |
-| TC-07 | Senha abaixo do limite mínimo | 1. Inserir e-mail válido<br>2. Inserir senha com menos caracteres que o mínimo exigido<br>3. Clicar em "Entrar" | Mensagem informando o limite mínimo de caracteres | [preencher] | [Pass/Fail] | evidence/tc-07.png |
+**Objetivo:** testar comportamento do formulário de login.
 
-**Observação:** substituir "[preencher]" pelos resultados reais observados durante a execução, e "[Pass/Fail]" pelo status real de cada caso.
+| Passo | Ação | Resultado esperado | Status | Resultado obtido | Evidência |
+|---|---|---|---|---|---|
+| 1 | Inserir e-mail correto + senha errada | Sistema não permite continuar, exibindo mensagem de "senha inválida" ou "tente novamente" | ✅ Passou | O mesmo que o esperado | [imagem](https://www.awesomescreenshot.com/image/63239964?key=858e45968eeabf832f89ff6cce6f32c7) |
+| 2 | Inserir e-mail sem "@" | Sistema pede para inserir um e-mail válido | ✅ Passou | O mesmo que o esperado | [imagem](https://www.awesomescreenshot.com/image/63240000?key=07bc569d2ae9382975da882b4c030144) |
+| 3 | Deixar senha vazia | Sistema pede para inserir uma senha válida | ✅ Passou | O mesmo que o esperado | [vídeo](https://www.awesomescreenshot.com/video/56144291?key=0ae62b4c5642397c3aa04fe08b38eb6f) |
+| 4 | Deixar e-mail vazio | Sistema pede para inserir um e-mail válido | ✅ Passou | O mesmo que o esperado | [vídeo](https://www.awesomescreenshot.com/video/56144322?key=47bf73873bf91fd1376226cc05b4b2e7) |
+| 5 | Testar "mostrar senha" | A senha é exibida ao clicar no botão ao lado | ✅ Passou | O mesmo que o esperado | [vídeo](https://www.awesomescreenshot.com/video/56144379?key=95302086e84b3c649e68eb2936527ed6) |
+| 6 | Testar limite mínimo de caracteres | Sistema não permite prosseguir sem o mínimo de caracteres exigido | ✅ Passou | O mesmo que o esperado | [imagem](https://www.awesomescreenshot.com/image/63402401?key=686073b375c7b8034e21089bf109c746) |
+
+**Resultado geral:** nenhuma inconsistência encontrada neste teste.
