@@ -1,12 +1,13 @@
-# Casos de Teste — Cadastro LinkedIn
+# Casos de Teste — Cadastro (LinkedIn)
 
-| ID | Cenário | Passos | Resultado esperado | Resultado obtido | Status | Evidência |
-|---|---|---|---|---|---|---|
-| TC-01 | Acesso ao formulário "Criar conta" | 1. Acessar linkedin.com<br>2. Clicar em "Criar conta" | Formulário de cadastro exibido corretamente com todos os campos | [preencher] | [Pass/Fail] | evidence/tc-01.png |
-| TC-02 | E-mail em formato inválido | 1. No campo de e-mail, inserir texto sem "@" ou domínio inválido<br>2. Clicar em "Continuar" | Mensagem de erro específica sobre formato de e-mail inválido | [preencher] | [Pass/Fail] | evidence/tc-02.png |
-| TC-03 | Campo obrigatório vazio | 1. Deixar um campo obrigatório em branco (ex.: nome ou e-mail)<br>2. Clicar em "Continuar" | Sistema bloqueia o avanço e indica o campo pendente | [preencher] | [Pass/Fail] | evidence/tc-03.png |
-| TC-04 | Senha curta | 1. Inserir senha com menos caracteres que o mínimo exigido<br>2. Clicar em "Continuar" | Mensagem informando o limite mínimo de caracteres | [preencher] | [Pass/Fail] | evidence/tc-04.png |
-| TC-05 | Senha sem números | 1. Inserir senha composta apenas por letras<br>2. Clicar em "Continuar" | Mensagem indicando exigência de número na senha (se essa for a regra) | [preencher] | [Pass/Fail] | evidence/tc-05.png |
-| TC-06 | Senha sem letras | 1. Inserir senha composta apenas por números<br>2. Clicar em "Continuar" | Mensagem indicando exigência de letra na senha (se essa for a regra) | [preencher] | [Pass/Fail] | evidence/tc-06.png |
+**Objetivo:** validar comportamentos do formulário de cadastro.
 
-**Observação:** substituir "[preencher]" pelos resultados reais observados durante a execução, e "[Pass/Fail]" pelo status real de cada caso.
+| Passo | Ação | Resultado esperado | Status | Resultado obtido | Evidência |
+|---|---|---|---|---|---|
+| 1 | Abrir "Criar Conta" ou "Cadastre-se agora" | O botão está funcional e o sistema redireciona para a tela de cadastro | ✅ Passou | O mesmo que o esperado | [imagem](https://www.awesomescreenshot.com/image/63161806?key=b4435742678b1a976eb9c1e18b0406e6) |
+| 2 | Testar variações de e-mail inválidos | O sistema apresenta mensagem de e-mail inválido, ou pede que insira um válido | ✅ Passou | O mesmo que o esperado | [imagem](https://www.awesomescreenshot.com/image/63162448?key=13c0697f9a4b7d555cd973b71fd7ecae) |
+| 3 | Deixar campos vazios e validar mensagens de erro | O sistema apresenta mensagens pedindo e-mail e senha | ✅ Passou | O mesmo que o esperado | [vídeo](https://www.awesomescreenshot.com/video/56063921?key=7661b390da4244aff77d1221167f50de) |
+| 4 | Testar combinações de senha (curtas, sem números, sem letras) | O sistema rejeita senhas fracas, mesmo com só letras ou só números, desde que respeitem o tamanho mínimo exigido | ✅ Passou | O mesmo que o esperado | [vídeo](https://www.awesomescreenshot.com/video/56065555?key=28a51202e7f68e177da472644e3d86ed) |
+| 5 | Verificar comportamento do botão "Continuar" | Após clicar, o usuário é direcionado à próxima tela até concluir o cadastro | ✅ Passou | O mesmo que o esperado | [imagem](https://www.awesomescreenshot.com/image/63166807?key=cdc754b889ead839ec8ace3ee13704a99) |
+
+**Resultado geral:** nenhuma inconsistência encontrada neste teste.
