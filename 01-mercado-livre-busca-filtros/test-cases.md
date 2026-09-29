@@ -1,15 +1,19 @@
-# Casos de Teste — Busca e Filtros (Mercado Livre)
+# Casos de Teste — Busca (Mercado Livre)
 
-| ID | Cenário | Passos | Resultado esperado | Resultado obtido | Status | Evidência |
-|---|---|---|---|---|---|---|
-| TC-01 | Busca por produto existente | 1. Acessar a home<br>2. Digitar nome de produto válido na busca<br>3. Pressionar Enter | Lista de resultados relevantes ao termo buscado | [preencher] | [Pass/Fail] | evidence/tc-01.png |
-| TC-02 | Busca por termo inexistente | 1. Digitar termo aleatório sem correspondência<br>2. Pressionar Enter | Mensagem informando ausência de resultados, sem erro técnico | [preencher] | [Pass/Fail] | evidence/tc-02.png |
-| TC-03 | Busca com termo parcial | 1. Digitar parte do nome de um produto<br>2. Pressionar Enter | Resultados relacionados ao termo parcial digitado | [preencher] | [Pass/Fail] | evidence/tc-03.png |
-| TC-04 | Filtro por faixa de preço | 1. Realizar busca<br>2. Aplicar filtro de preço mínimo/máximo | Todos os produtos exibidos dentro da faixa definida | [preencher] | [Pass/Fail] | evidence/tc-04.png |
-| TC-05 | Filtro por categoria | 1. Realizar busca<br>2. Selecionar uma categoria no filtro | Resultados pertencentes exclusivamente à categoria selecionada | [preencher] | [Pass/Fail] | evidence/tc-05.png |
-| TC-06 | Filtro por condição (novo/usado) | 1. Realizar busca<br>2. Aplicar filtro "novo" ou "usado" | Resultados exibidos correspondem apenas à condição selecionada | [preencher] | [Pass/Fail] | evidence/tc-06.png |
-| TC-07 | Combinação de múltiplos filtros | 1. Aplicar filtro de categoria + preço + condição simultaneamente | Resultados atendem a todos os filtros combinados | [preencher] | [Pass/Fail] | evidence/tc-07.png |
-| TC-08 | Ordenação por menor preço | 1. Realizar busca<br>2. Selecionar ordenação "menor preço" | Lista ordenada de forma crescente por preço | [preencher] | [Pass/Fail] | evidence/tc-08.png |
-| TC-09 | Remoção de filtro aplicado | 1. Aplicar um filtro<br>2. Remover o filtro aplicado | Resultados retornam ao estado sem o filtro removido | [preencher] | [Pass/Fail] | evidence/tc-09.png |
+**Pré-condição:** estar na página inicial do Mercado Livre, com campo de busca disponível.
 
-**Observação:** substituir "[preencher]" pelos resultados reais observados durante a execução, e "[Pass/Fail]" pelo status real de cada caso.
+## Cenário 1 — Buscar por um produto existente
+
+| Passo | Ação | Resultado esperado | Status | Resultado obtido | Evidência |
+|---|---|---|---|---|---|
+| 1 | Acessar o Mercado Livre | O usuário tem acesso à página principal | ✅ Passou | Termo aceito | [imagem](https://www.awesomescreenshot.com/image/63082298?key=45dbe8f3043f446e7e217a58ddb65812) |
+| 2 | Colocar "notebook" na barra de busca | O usuário consegue utilizar a barra de busca | ✅ Passou | Busca realizada | [vídeo](https://www.awesomescreenshot.com/video/55974492?key=a299d701581fa01c06a3690b2ef666a7) |
+| 3 | Clicar no botão de Buscar | O sistema deve apresentar resultados de notebooks | ✅ Passou | O mesmo que o esperado | [vídeo](https://www.awesomescreenshot.com/video/55974454?key=e5feb75f847e05242fdb45a89e8b1567) |
+
+## Cenário 2 — Buscar por um produto inexistente
+
+| Passo | Ação | Resultado esperado | Status | Resultado obtido | Evidência |
+|---|---|---|---|---|---|
+| 1 | Acessar o Mercado Livre | O usuário tem acesso à página principal | ✅ Passou | Termo aceito | [imagem](https://www.awesomescreenshot.com/image/63082490?key=2ddf7f1d75ecce53394cca0deda138e8) |
+| 2 | Digitar "abcd123" na barra de pesquisa | O usuário consegue utilizar a barra de busca | ✅ Passou | Busca realizada | [vídeo](https://www.awesomescreenshot.com/video/55974534?key=ad17d5a344e5e5aa59b7ff0fb3f1a199) |
+| 3 | Clicar no botão de Buscar | Não devem ser apresentados resultados sem relação com o termo pesquisado | ❌ **Falhou** | Foram apresentados produtos aparentemente aleatórios, sem relação com "abcd123" | [vídeo](https://www.awesomescreenshot.com/video/55974560?key=b613c04095aab0c22ecef13bdd0f5ff2) |
